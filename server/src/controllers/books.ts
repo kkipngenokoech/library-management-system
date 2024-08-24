@@ -91,6 +91,23 @@ class BookController {
                 ]
             }).limit(25).toArray();
         return books;
+        // console.log("we are really working")
+        // const vector = await getEmbeddings(query)
+        // console.log("we are here")
+        // console.log(vector)
+        // const aggregationPipeline = [
+        //     {
+        //         $vectorSearch: {
+        //             queryVector: vector,
+        //             path: "embeddings",
+        //             numCandinates: 100,
+        //             index: 'vector-index',
+        //             limit: 5,
+        //         }
+        //     }
+        // ];
+        // const  books = await collections?.books?.aggregate(aggregationPipeline).toArray() as Book[]
+        // return books;
     }
 
     public async createBook(book: Book): Promise<InsertOneResult> {
